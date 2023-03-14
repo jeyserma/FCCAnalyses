@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1678823744620,
+  "lastUpdate": 1678823746232,
   "repoUrl": "https://github.com/jeyserma/FCCAnalyses",
   "entries": {
     "Benchmark": [
@@ -1098,6 +1098,60 @@ window.BENCHMARK_DATA = {
             "unit": "Seconds",
             "range": 10,
             "extra": "Analysis path: examples/FCCee/vertex_lcfiplus/analysis_V0.py"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "janeysermans@gmail.com",
+            "name": "Jan Eysermans",
+            "username": "jeyserma"
+          },
+          "committer": {
+            "email": "janeysermans@gmail.com",
+            "name": "Jan Eysermans",
+            "username": "jeyserma"
+          },
+          "distinct": true,
+          "id": "de0d887ceb79c4cadd431e74ebad5ca5154c3dec",
+          "message": "Add option for 2D and 3D histograms in final stage",
+          "timestamp": "2023-03-14T20:44:56+01:00",
+          "tree_id": "af2039f38e8beaa243e2744d666c158456145beb",
+          "url": "https://github.com/jeyserma/FCCAnalyses/commit/de0d887ceb79c4cadd431e74ebad5ca5154c3dec"
+        },
+        "date": 1678823745791,
+        "tool": "customBiggerIsBetter",
+        "benches": [
+          {
+            "name": "nightly | Events processed per second: examples/FCCee/weaver/analysis_inference.py",
+            "value": 2.919307468793567,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "nightly | Events processed per second: case-studies/analysis_example/scripts/analysis_example.py",
+            "value": 10.026794510744626,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "nightly | Events processed per second: examples/FCCee/higgs/mH-recoil/mumu/analysis_stage1.py",
+            "value": 8.562184543674254,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "nightly | Events processed per second: examples/FCCee/flavour/Bc2TauNu/analysis_B2TauNu_truth.py",
+            "value": 6.559956084949747,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "nightly | Events processed per second: examples/FCCee/test/jet_constituents.py",
+            "value": 8.6303700380538,
+            "unit": "Evt/s"
+          },
+          {
+            "name": "nightly | Events processed per second: examples/FCCee/vertex_lcfiplus/analysis_V0.py",
+            "value": 4.744604537538035,
+            "unit": "Evt/s"
           }
         ]
       }
