@@ -15,9 +15,10 @@ var searchData=
   ['jetflavourhelper_2epy_12',['jetFlavourHelper.py',['../jet_flavour_helper_8py.html',1,'']]],
   ['jetflavourutils_2ecc_13',['JetFlavourUtils.cc',['../_jet_flavour_utils_8cc.html',1,'']]],
   ['jetflavourutils_2eh_14',['JetFlavourUtils.h',['../_jet_flavour_utils_8h.html',1,'']]],
-  ['jets_15',['jets',['../struct_jet_clustering_1_1_f_c_c_analyses_jet.html#a9cb6fb56f7cca98091f81ef68fa3a1db',1,'JetClustering::FCCAnalysesJet::jets()'],['../classjet_clustering_helper_1_1_exclusive_jet_clustering_helper.html#a20637f074ef4b87e8a6a39600cb550a7',1,'jetClusteringHelper.ExclusiveJetClusteringHelper.jets()']]],
+  ['jets_15',['jets',['../classjet_clustering_helper_1_1_exclusive_jet_clustering_helper.html#a20637f074ef4b87e8a6a39600cb550a7',1,'jetClusteringHelper.ExclusiveJetClusteringHelper.jets()'],['../struct_jet_clustering_1_1_f_c_c_analyses_jet.html#a9cb6fb56f7cca98091f81ef68fa3a1db',1,'JetClustering::FCCAnalysesJet::jets()']]],
   ['jets_5fsorting_5fon_5fenergy_16',['jets_sorting_on_energy',['../namespace_f_c_c_analyses_1_1_jet_constituents_utils.html#aa7eeaa54dfcb63650303f19c0b7c1c1f',1,'FCCAnalyses::JetConstituentsUtils']]],
   ['jets_5fsorting_5fon_5fnconst_17',['jets_sorting_on_nconst',['../namespace_f_c_c_analyses_1_1_jet_constituents_utils.html#a402931ddc1c29178801d5f21898c0256',1,'FCCAnalyses::JetConstituentsUtils']]],
-  ['jettaggingutils_2ecc_18',['JetTaggingUtils.cc',['../_jet_tagging_utils_8cc.html',1,'']]],
-  ['jettaggingutils_2eh_19',['JetTaggingUtils.h',['../_jet_tagging_utils_8h.html',1,'']]]
+  ['jets_5ftwohemispheres_18',['jets_TwoHemispheres',['../struct_f_c_c_analyses_1_1_algorithms_1_1jets___two_hemispheres.html',1,'FCCAnalyses::Algorithms::jets_TwoHemispheres'],['../struct_f_c_c_analyses_1_1_algorithms_1_1jets___two_hemispheres.html#a1de43dcaa297bca98689a41135a4e554',1,'FCCAnalyses::Algorithms::jets_TwoHemispheres::jets_TwoHemispheres()']]],
+  ['jettaggingutils_2ecc_19',['JetTaggingUtils.cc',['../_jet_tagging_utils_8cc.html',1,'']]],
+  ['jettaggingutils_2eh_20',['JetTaggingUtils.h',['../_jet_tagging_utils_8h.html',1,'']]]
 ];
