@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1680531656689,
+  "lastUpdate": 1680531670940,
   "repoUrl": "https://github.com/jeyserma/FCCAnalyses",
   "entries": {
     "Benchmark": [
@@ -1512,6 +1512,72 @@ window.BENCHMARK_DATA = {
             "name": "nightly | Events processed per second: examples/FCCee/vertex_lcfiplus/analysis_V0.py",
             "value": 2.7228080328882025,
             "unit": "Evt/s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "janeysermans@gmail.com",
+            "name": "Jan Eysermans",
+            "username": "jeyserma"
+          },
+          "committer": {
+            "email": "janeysermans@gmail.com",
+            "name": "Jan Eysermans",
+            "username": "jeyserma"
+          },
+          "distinct": true,
+          "id": "73cd4ac9607a14aa22e86aa6e77f898c8e2e5bc7",
+          "message": "Add stat uncertainty and rebin options in plotter",
+          "timestamp": "2023-04-03T16:10:11+02:00",
+          "tree_id": "d1cabbcc748250b2c6f018012d44dfd448a7255e",
+          "url": "https://github.com/jeyserma/FCCAnalyses/commit/73cd4ac9607a14aa22e86aa6e77f898c8e2e5bc7"
+        },
+        "date": 1680531669456,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "prod | Time spent running the analysis: examples/FCCee/weaver/analysis_inference.py",
+            "value": 34.02783131599426,
+            "unit": "Seconds",
+            "range": 10,
+            "extra": "Analysis path: examples/FCCee/weaver/analysis_inference.py"
+          },
+          {
+            "name": "prod | Time spent running the analysis: case-studies/analysis_example/scripts/analysis_example.py",
+            "value": 9.909617185592651,
+            "unit": "Seconds",
+            "range": 10,
+            "extra": "Analysis path: case-studies/analysis_example/scripts/analysis_example.py"
+          },
+          {
+            "name": "prod | Time spent running the analysis: examples/FCCee/higgs/mH-recoil/mumu/analysis_stage1.py",
+            "value": 11.145267248153687,
+            "unit": "Seconds",
+            "range": 10,
+            "extra": "Analysis path: examples/FCCee/higgs/mH-recoil/mumu/analysis_stage1.py"
+          },
+          {
+            "name": "prod | Time spent running the analysis: examples/FCCee/flavour/Bc2TauNu/analysis_B2TauNu_truth.py",
+            "value": 15.243844985961914,
+            "unit": "Seconds",
+            "range": 10,
+            "extra": "Analysis path: examples/FCCee/flavour/Bc2TauNu/analysis_B2TauNu_truth.py"
+          },
+          {
+            "name": "prod | Time spent running the analysis: examples/FCCee/test/jet_constituents.py",
+            "value": 11.237554788589478,
+            "unit": "Seconds",
+            "range": 10,
+            "extra": "Analysis path: examples/FCCee/test/jet_constituents.py"
+          },
+          {
+            "name": "prod | Time spent running the analysis: examples/FCCee/vertex_lcfiplus/analysis_V0.py",
+            "value": 32.016326665878296,
+            "unit": "Seconds",
+            "range": 10,
+            "extra": "Analysis path: examples/FCCee/vertex_lcfiplus/analysis_V0.py"
           }
         ]
       }
