@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1681860113471,
+  "lastUpdate": 1681860114527,
   "repoUrl": "https://github.com/jeyserma/FCCAnalyses",
   "entries": {
     "Benchmark": [
@@ -2175,6 +2175,72 @@ window.BENCHMARK_DATA = {
           {
             "name": "nightly | Time spent running the analysis: examples/FCCee/vertex_lcfiplus/analysis_V0.py",
             "value": 32.21326422691345,
+            "unit": "Seconds",
+            "range": 10,
+            "extra": "Analysis path: examples/FCCee/vertex_lcfiplus/analysis_V0.py"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "janeysermans@gmail.com",
+            "name": "Jan Eysermans",
+            "username": "jeyserma"
+          },
+          "committer": {
+            "email": "janeysermans@gmail.com",
+            "name": "Jan Eysermans",
+            "username": "jeyserma"
+          },
+          "distinct": true,
+          "id": "5fb7c6b5db91d8540a85bbff4063ccf8370c6be1",
+          "message": "Increase hatch spacing for error bar plots",
+          "timestamp": "2023-04-17T20:27:07+02:00",
+          "tree_id": "51c2e87c785ee91c64efaca681ab88468ce2031c",
+          "url": "https://github.com/jeyserma/FCCAnalyses/commit/5fb7c6b5db91d8540a85bbff4063ccf8370c6be1"
+        },
+        "date": 1681860111888,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "prod | Time spent running the analysis: examples/FCCee/weaver/analysis_inference.py",
+            "value": 34.432403326034546,
+            "unit": "Seconds",
+            "range": 10,
+            "extra": "Analysis path: examples/FCCee/weaver/analysis_inference.py"
+          },
+          {
+            "name": "prod | Time spent running the analysis: case-studies/analysis_example/scripts/analysis_example.py",
+            "value": 10.28102731704712,
+            "unit": "Seconds",
+            "range": 10,
+            "extra": "Analysis path: case-studies/analysis_example/scripts/analysis_example.py"
+          },
+          {
+            "name": "prod | Time spent running the analysis: examples/FCCee/higgs/mH-recoil/mumu/analysis_stage1.py",
+            "value": 12.496602535247803,
+            "unit": "Seconds",
+            "range": 10,
+            "extra": "Analysis path: examples/FCCee/higgs/mH-recoil/mumu/analysis_stage1.py"
+          },
+          {
+            "name": "prod | Time spent running the analysis: examples/FCCee/flavour/Bc2TauNu/analysis_B2TauNu_truth.py",
+            "value": 15.686278820037842,
+            "unit": "Seconds",
+            "range": 10,
+            "extra": "Analysis path: examples/FCCee/flavour/Bc2TauNu/analysis_B2TauNu_truth.py"
+          },
+          {
+            "name": "prod | Time spent running the analysis: examples/FCCee/test/jet_constituents.py",
+            "value": 11.817840576171875,
+            "unit": "Seconds",
+            "range": 10,
+            "extra": "Analysis path: examples/FCCee/test/jet_constituents.py"
+          },
+          {
+            "name": "prod | Time spent running the analysis: examples/FCCee/vertex_lcfiplus/analysis_V0.py",
+            "value": 31.934922218322754,
             "unit": "Seconds",
             "range": 10,
             "extra": "Analysis path: examples/FCCee/vertex_lcfiplus/analysis_V0.py"
