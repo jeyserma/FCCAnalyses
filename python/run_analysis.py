@@ -426,6 +426,81 @@ def send_to_batch(rdf_module, chunk_list, process, anapath: str):
         sys.exit(3)
 
 
+
+# _____________________________________________________________________________
+def send_to_slurm(rdf_module, chunk_list, process, anapath: str):
+    '''
+    Send jobs to Slurm.
+    '''
+    local_dir = os.environ['LOCAL_DIR']
+    current_date = datetime.datetime.fromtimestamp(
+        datetime.datetime.now().timestamp()).strftime('%Y-%m-%d_%H-%M-%S')
+    log_dir = os.path.join(local_dir, 'BatchOutputs', current_date, process)
+    if not os.path.exists(log_dir):
+        os.system(f'mkdir -p {log_dir}')
+
+    # Making sure the FCCAnalyses libraries are compiled and installed
+    try:
+        subprocess.check_output(['make', 'install'],
+                                cwd=local_dir+'/build',
+                                stderr=subprocess.DEVNULL
+                                )
+    except subprocess.CalledProcessError:
+        LOGGER.error('The FCCanalyses libraries are not properly build and '
+                     'installed!\nAborting job submission...')
+        sys.exit(3)
+
+
+    output_dir = get_element(rdf_module, "outputDir")
+    output_dir_eos = get_element(rdf_module, "outputDirEos")
+    eos_type = get_element(rdf_module, "eosType")
+
+    subjob_scripts = []
+    args = []
+    for ch in range(len(chunk_list)):
+        inputStr = ','.join(chunk_list[ch])
+        args.append(inputStr)
+
+    # make slurm submission script
+
+    slurm_config = f"""#!/bin/bash
+#
+#SBATCH --job-name=test
+#SBATCH --array=0-{(len(chunk_list)-1)}
+#SBATCH --output={log_dir}/slurm_%A_%a.out
+#SBATCH --error={log_dir}/slurm_%A_%a.err
+#SBATCH --partition=submit
+#
+#SBATCH --time=10:00
+#SBATCH --mem-per-cpu=2000
+
+
+# Define input files (either dynamically or from a list)
+INPUT_FILES=({' '.join(args)})
+INPUT=${{INPUT_FILES[$SLURM_ARRAY_TASK_ID]}}
+IFS=',' read -ra FILES <<< "$INPUT" # split comma-separated input to string
+OUTPUT_FILE="{output_dir}/chunk_${{SLURM_ARRAY_TASK_ID}}.root"
+
+# source
+source {local_dir}/setup.sh
+
+# run FCCAnalyses
+{local_dir}/bin/fccanalysis run {anapath} --batch --output "$OUTPUT_FILE" --files-list "${{FILES[@]}}"
+#echo "$INPUT" > "$OUTPUT_FILE"
+    """
+
+
+    slurm_config_path = f'{log_dir}/submit_{process}.slurm'
+    with open(slurm_config_path, 'w', encoding='utf-8') as cfgfile:
+        cfgfile.write(slurm_config)
+
+    batch_cmd = f'sbatch {slurm_config_path}'
+    LOGGER.info('Slurm command:\n  %s', batch_cmd)
+    success = submit_job(batch_cmd, 10)
+    if not success:
+        sys.exit(3)
+
+
 # _____________________________________________________________________________
 def apply_filepath_rewrites(filepath: str) -> str:
     '''
@@ -676,7 +751,8 @@ def run_stages(args, rdf_module, anapath):
                 LOGGER.warning('\033[4m\033[1m\033[91mRunning on batch with '
                                'only one chunk might not be optimal\033[0m')
 
-            send_to_batch(rdf_module, chunk_list, process_name, anapath)
+            #send_to_batch(rdf_module, chunk_list, process_name, anapath)
+            send_to_slurm(rdf_module, chunk_list, process_name, anapath)
 
         else:
             # Running locally
